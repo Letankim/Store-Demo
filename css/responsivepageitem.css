@@ -1,0 +1,27 @@
+/* mobie */
+@media (max-width: 740px) {
+    html {
+        overflow-x: hidden;
+    }
+    .main__product-container,
+    .describe__product-wrapper {
+        width: 100%;
+    }
+    .source__product-item {
+        font-size: 10px;
+        padding: 0px 5px;
+    }
+    .source__spectrum {
+        font-size: 10px;
+        margin: 0px 2px;
+    }
+    .main__product-name {
+        font-size: 12px;
+    }
+    .main__product-img-desc img {
+        width: 50px;
+    }
+    .btn {
+        margin-right: 0;
+    }
+}
