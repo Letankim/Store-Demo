@@ -13,20 +13,6 @@ $(document).ready(function() {
 });
 // 
 // hiện ẩn add products
-var btnAdd = document.querySelector('.icon-add-mobile');
-var addNow = document.querySelector('.add__now');
-var overplay = document.querySelector('.overplay');
-var iconClose = document.querySelector('.icon__close-add');
-document.querySelector('.from__add-product').style.display = 'none';
-
-btnAdd.onclick = function() {
-    document.querySelector('.from__add-product').style.display = 'block';
-};
-
-addNow.addEventListener('click', addProductNew)
-iconClose.addEventListener('click', addProductNew)
-overplay.addEventListener('click', addProductNew)
-
 function addProductNew() {
     document.querySelector('.from__add-product').style.display = 'none';
 };

@@ -28,17 +28,17 @@ function clickSlider() {
 };
 
 // -----------------------------------notice-sale----------------------------------------------------
-var noticeWrapper = document.querySelector('.notice__sale-wrapper');
-var noticeFade = document.querySelector('.notice__sale-run');
+// var noticeWrapper = document.querySelector('.notice__sale-wrapper');
+// var noticeFade = document.querySelector('.notice__sale-run');
 
-function runNoticeContent() {
-   noticeWrapper.style.opacity = '1';
-   noticeFade.classList.add('active__notice');
-};
-function removeNotice() {
-    noticeWrapper.style.opacity = '0';
-    noticeFade.classList.remove('active__notice');
-};
+// function runNoticeContent() {
+//    noticeWrapper.style.opacity = '1';
+//    noticeFade.classList.add('active__notice');
+// };
+// function removeNotice() {
+//     noticeWrapper.style.opacity = '0';
+//     noticeFade.classList.remove('active__notice');
+// };
 // chnage product filled
 
 function changeProductFilter(type, element) {
@@ -116,3 +116,21 @@ function changeProductFilter(type, element) {
             break;
     };
 };
+
+// my cart discount control
+
+var inputCodeDiscount = document.querySelector('.input-discount');
+var titleSubDiscountCode = document.querySelector('.title-discount-code');
+
+inputCodeDiscount.onfocus = function() {
+    titleSubDiscountCode.classList.add('active');
+}
+titleSubDiscountCode.onclick = function() {
+    inputCodeDiscount.focus();
+}
+inputCodeDiscount.onblur = function() {
+    if(inputCodeDiscount.value == '') {
+        titleSubDiscountCode.classList.remove('active');
+        titleSubDiscountCode.style.display = 'block';
+    }
+}

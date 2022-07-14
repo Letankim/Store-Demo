@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/grid.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/toast.css">
     <link rel="stylesheet" href="../css/responsiveapp.css">
     <title>Trang chủ</title>
 </head>
@@ -156,6 +157,7 @@
                     </div>
                     <div class="header__cart">
                         <i class='bx bx-cart icon-cart' ></i>
+                        <span class="notice-number">0</span>
                     </div>
                 </div>
             </div>
@@ -598,13 +600,13 @@
                     <img src="https://bizweb.dktcdn.net/100/415/483/themes/804267/assets/news_update_icon.svg?1639989125504" alt="">
                     Tin khuyến mãi</a></li>
                 <div class="notice__sale-run col l-10 s-7">
-                   <div class="notice__sale-wrapper">
+                   <marquee class="notice__sale-wrapper">
                         <span class = 'notice__sale-content'>Tuyệt chiêu nhận biết pin iPhone hao nguồn và cách khắc phục vô cùng hiệu quả
                         </span>
                         <span class = 'notice__sale-content'>Hé lộ điểm hiệu năng AnTuTu và Geekbench của siêu phẩm iPhone 12, iPhone 12 Pro mới trình làng, có gì đó sai sai?</span>
-                   </div>
-                </div>
-                
+                        <span class = 'notice__sale-content'>Hé lộ điểm hiệu năng AnTuTu và Geekbench của siêu phẩm iPhone 12, iPhone 12 Pro mới trình làng, có gì đó sai sai?</span>
+                   </marquee>
+                </div>   
             </ul>
         </div>
 <!-- featured--content -->
@@ -3644,16 +3646,46 @@
                         <i class='bx bx-x icon-close-cart'></i>
                     </div>
                 </div>
-                <div class="cart__body">
-                    <div class="cart__item row">
-                      <!-- render product -->
+                <div class="wrapper-body-cart">
+                    <div class="cart__body">
+                        <div class="cart__item row">
+                          <!-- render product -->
+                        </div>
+                        <div class="discount-code">
+                            <div class="code-form">
+                                <div class="input-code">
+                                    <input type="text" class="input-discount">
+                                    <span class="title-discount-code">Discount code</span>
+                                </div>
+                                <button class="btn-submit">Áp dụng</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="sum__pay">
-                    <span class="sum__pay-item">Thành tiền:</span>
-                    <div>
-                        <span class="pay__all"></span>
-                        <span>VND</span>
+                    <div class="sum__pay">
+                        <div class="desc-pay">
+                            <div class="pays">
+                                <span class="pay-item-title">Tổng tiền sản phẩm:</span>
+                                <div>
+                                    <span class="pay-item-name pay-all-product">300.000.000vnd</span>
+                                </div>
+                            </div>
+                            <div class="pays">
+                                <span class="pay-item-title voucher">Voucher:</span>
+                                <div>
+                                    <span class="pay-item-name discount-voucher">300.000.000vnd</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-total">
+                            <span class="sum__pay-item">Thành tiền:</span>
+                            <div>
+                                <span class="pay__all"></span>
+                                <span>VND</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empty-cart">
+                        <img src="https://rtworkspace.com/wp-content/plugins/rtworkspace-ecommerce-wp-plugin/assets/img/empty-cart.png" alt="" class="img-empty-cart">
                     </div>
                 </div>
             </div>
@@ -3674,14 +3706,14 @@
                     <span><i class="fas fa-sun" title = "Dark mode"></i></span>
                 </span>
                 <span style = "--i:4;">
-                    <span><i class="fas fa-trash-alt icon-bin" title = "Remove product"></i></span>
+                    <span><i class='bx bx-message-rounded-dots'></i></span>
                 </span>
                 <span style = "--i:5;" class = 'back_top'>
                     <span><i class="far fa-arrow-alt-circle-up" title="Back to top"></i></span>
                 </span>
             </div>
         </div>
-        <div class="from__add-product">
+        <!-- <div class="from__add-product">
             <div class="overplay"></div>
             <div class="add__info-product">
                 <div class="add__container row">
@@ -3740,8 +3772,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </nav>
+    <!-- toast__success -->
+    <div id="toast">
+        
+    </div>
+    <span class="show"></span>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="../js/app.js"></script>
@@ -3749,9 +3786,8 @@
 <script src="../js/pageitem.js"></script>
 <script src="../js/showcartmenu.js"></script>
 <script src = "../js/backtop.js"></script>
+<script src = "../js/toastlibrary.js"></script>
 <script>
-    setInterval(runNoticeContent, 1000);
-    setInterval(removeNotice, 3000);
     clickSlider();
     setInterval(slideAuto, 5000);
     showMyCart();

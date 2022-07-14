@@ -3,6 +3,9 @@
     html {
         overflow-x: hidden;
     }
+    body {
+        gap: 0;
+    }
     .main__product-container,
     .describe__product-wrapper {
         width: 100%;

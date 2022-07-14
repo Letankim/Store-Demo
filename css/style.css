@@ -458,6 +458,7 @@ body {
    position: relative;
    transition: all 0.2s linear;
    user-select: none;
+   cursor: pointer;
 }
 .dot__control-slider-item.slide__active {
     transition: all 0.2s linear;
@@ -573,7 +574,9 @@ body {
     align-items: center;
 }
 .notice__sale-wrapper {
-    opacity: 0;
+    display: flex;
+    width: 100%;
+    opacity: 1;
 }
 .notice__sale-link img {
     width: 20px;
@@ -1315,6 +1318,7 @@ body {
 .footer__btn-title-less.btn-active,
 .footer__btn-title.btn-active {
     display: block;
+    cursor: pointer;
 }
 .footer__btn-title {
     padding: 8px 20px;
@@ -1386,8 +1390,13 @@ body {
 }
 
 .nav__btn span span i {
-    font-size: 24px;
-    transform: rotate(209deg);
+    font-size: 20px;
+    transform: rotate(206deg);
+    color:rgba(67, 19, 19, 0.9)
+}
+.bx-message-rounded-dots {
+    transform: rotate(115deg) !important;
+    font-size: 24px !important;
 }
 .icon-bin {
     transform: rotate(110deg) !important;
@@ -1607,7 +1616,7 @@ button {
 }
 .icon__close-menu {
     position: absolute;
-    top: 0px;
+    top: 2px;
     right: 0px;
     color: #fff;
     font-size: 26px;
@@ -1679,7 +1688,6 @@ button {
 }
 .cart__wrapper {
     position: absolute;
-    padding: 10px;
     right: -100%;
     bottom: 0px;
     top: 0px;
@@ -1729,6 +1737,17 @@ button {
 }
 .cart__body {
    margin-top: 5px;
+   padding: 10px;
+   flex-direction: column;
+}
+/* empty cart */
+.empty-cart {
+    width: 100%;
+    height: 100%;
+}
+.img-empty-cart {
+    width: 100%;
+    height: 100%;
 }
 .cart__item {
    display: flex;
@@ -1782,21 +1801,101 @@ button {
     color: #30656b;
     font-weight: 300;
     margin-top: 5px;
+    cursor: pointer;
 }
 .sum__pay {
     width: 100%;
     bottom: 0;
     right: 0px;
     height: 50px;
-    background: #333;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     color: #fff;
     font-size: 16px;
-    padding: 0px 8px;
+}
+.sum__pay-item {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
 }
 
+.discount-code {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 5px 0;
+}
+.code-form {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    gap: 10px;
+}
+.input-code {
+    flex: 0 0 60%;
+    height: 100%;
+    position: relative;
+}
+.input-discount {
+    padding: 15px 5px 5px 5px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+}
+.title-discount-code {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    line-height: 40px;
+    padding-left: 5px;
+    color: #7d8180;
+    transition: all 0.2s ease;
+}
+.title-discount-code.active {
+    top: 9px;
+    font-size: 0.8rem;
+    line-height: 0px;
+}
+.btn-submit {
+    flex: 0 0 35%;
+    height: 100%;
+    margin: 0;
+}
+.container-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px;
+    background:rgb(16, 177, 222);
+}
+.desc-pay {
+    width: 100%;
+    margin: 5px 0px;
+    padding: 0px 5px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.pays {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.pay-item-title {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 600;
+}
+.pay-item-name {
+    font-size: 0.7rem;
+    color: #333;
+    font-weight: 500;
+}
 
 @keyframes zoom {
     0% {
@@ -1805,4 +1904,18 @@ button {
     100% {
         transform: scale(1);
     }
+}
+
+.notice-number {
+    position: absolute !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    background-color: #fff;
 }

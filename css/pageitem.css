@@ -315,3 +315,10 @@ table tr:nth-child(odd) {
     background-color: #f3f4f7;
 }
 
+.number__in-cart input {
+    width: 40px;
+    text-align: center;
+    margin-left: 8px;
+    height: 26px;
+}
+

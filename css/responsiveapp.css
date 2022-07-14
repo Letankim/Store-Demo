@@ -3,6 +3,9 @@
     :root {
         --height-header: calc(var(--height-header) + var(--height-header-search));
     }
+    body {
+        gap: 0;
+    }
     .hide {
         display: none;
     }
@@ -52,6 +55,9 @@
        color: #fff;
        font-size: 30px;
        margin-left: 5px;
+    }
+    .header__cart {
+        position: relative;
     }
     .header__search {
        margin-top: 5px;
