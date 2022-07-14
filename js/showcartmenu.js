@@ -119,7 +119,9 @@ function addToCart(btnBuy) {
     sessionStorage.setItem('infoProductincart', JSON.stringify(infoProductInCart));
     showMyCart();
 }
-showMyCart();
+window.onload = function() {
+    showMyCart();
+}
 // function show all product in cart
 function showMyCart(discountCode, voucherError) {
     if (infoProductInCart.length < 1) {
