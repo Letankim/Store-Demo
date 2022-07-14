@@ -9,10 +9,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    width: 100%;
 }
 body {
     font-family: Roboto;
     overflow-x: hidden;
+    width: 100%;
 }
 .wrapper {
     width: 100%;
